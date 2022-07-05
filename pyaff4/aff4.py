@@ -303,7 +303,9 @@ class AFF4Stream(AFF4Object):
     def Size(self):
         return self.size
 
-    def read(self, length=1024*1024):
+    def read(self, length=None):
+        if length is None:
+            length=self.size
         return self.Read(length)
 
     def seek(self, offset, whence=0):
