@@ -323,6 +323,9 @@ class AFF4Stream(AFF4Object):
     def Prepare(self):
         self.SeekRead(0)
         #self.SeekWrite(0)
+        
+    def close(self):
+        pass
 
 
 class ProgressContext(object):
